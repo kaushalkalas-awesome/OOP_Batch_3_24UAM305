@@ -6,15 +6,14 @@ public class MyDate {
 	private int day, month, year;
 
 	public MyDate(int day, int month, int year) throws InvalidDateException {
-		if(this.day>31 || this.day<0)
-			throw new InvalidDateException("Date",this.day);
-		else if(this.month>12 || this.month<0)
-			throw new InvalidDateException("Month",this.month);
-		else {
-			this.day = day;
-			this.month = month;
-			this.year = year;
-		}
+		if(day>31 || day<0)
+			throw new InvalidDateException();
+		if(month>12 || month<0)
+			throw new InvalidDateException();
+		
+		this.day = day;
+		this.month = month;
+		this.year = year;
 	}
 
 	public int getDay() {

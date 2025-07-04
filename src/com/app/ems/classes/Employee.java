@@ -4,13 +4,14 @@ public class Employee extends Person {
 	private int id;
 	private String department;
 	private double salary;
-	public static MyDate dateOfJoining;
+	public MyDate dateOfJoining;
 	
-	public Employee(String name, int id, String department, double salary) {
-		super(name);
+	public Employee(String name, int id, String department, double salary, MyDate dateOfBirth,MyDate dateOfJoining) {
+		super(name,dateOfBirth);
 		this.id = id;
 		this.department = department;
 		this.salary = salary;
+		this.dateOfJoining = dateOfJoining;
 	}
 
 	public int getId() {
@@ -42,7 +43,5 @@ public class Employee extends Person {
 		super.toString();
 		return String.format("\nId: %d\nDepartment: %s\nSalary: %f",id,department,salary);
 	}
-	
-	
 	
 }

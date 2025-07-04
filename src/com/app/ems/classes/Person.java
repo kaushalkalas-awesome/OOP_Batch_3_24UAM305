@@ -2,10 +2,11 @@ package com.app.ems.classes;
 
 public class Person {
 	private String name;
-	public static MyDate dateOfBirth;
+	public MyDate dateOfBirth;
 
-	public Person(String name) {
+	public Person(String name, MyDate dateOfBirth) {
 		this.name = name;
+		this.dateOfBirth = dateOfBirth;
 	}
 
 	public String getName() {
